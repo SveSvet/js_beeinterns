@@ -3,7 +3,6 @@
 console.log('Hello, World!')
 
 let i = 0;
-
 for (i = 10; i <= 50; i = i + 10) {
     console.log(i);
 }
@@ -16,13 +15,25 @@ for (i = 10; i <= 50; i = i + 10) {
   { profession: 'hero', name: 'Кларк', secondName: 'Кент' }
 */
 
-// const superman = new Men('Кларк', 'Кент');
-// console.log('superman: ', superman);
-// Men { profession: 'hero', name: 'Кларк', secondName: 'Кент' }
+function Men (name, secondName) {
+    this.profession = 'hero';
+    this.name = name;
+    this.secondName = secondName;
+}
+const superman = new Men('Кларк', 'Кент');
+console.log('superman: ', superman);
 
 
 // Задание 3
 // Напишите функцию sum, которая работает так: sum(a)(b) возвращает a + b.
+
+const sum = (a, b) => {
+    console.log('Сумма двух чисел:', a + b)
+};
+
+sum(1, 2);
+sum(5, -1)
+
 // sum(1)(2);  // 3
 // sum(5)(-1); // 4
 
@@ -30,11 +41,12 @@ for (i = 10; i <= 50; i = i + 10) {
 // Задание 4
 // Измените код так, чтобы console.log выводил последовательно символы 'П т и ц а'
 
-const alertWord = () => {
-    const bird = ['П', 'т', 'и', 'ц', 'а'];
-    for (let i = 0; i < bird.length; i++) {
-        console.log('i:', i)
-    }
+const bird = ['П', 'т', 'и', 'ц', 'а'];
+
+for (let index = 0; index < bird.length; index++) {
+    setTimeout(function() {
+        console.log(bird[index]);
+    }, 1000);
 }
-alertWord();
+
 
