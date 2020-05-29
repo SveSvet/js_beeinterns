@@ -38,7 +38,6 @@ const dragAndDrop = () => {
 
     card.addEventListener('dragstart', dragStartHandler);
     card.addEventListener('dragend', dragEndHandler);
-
 };
 
 const eventsCaption = () => {
