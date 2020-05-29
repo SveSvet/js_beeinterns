@@ -1,5 +1,112 @@
-body {
+
+* {margin: 0; padding: 0; box-sizing: border-box}
+
+.container {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #E2E9F9;
+
     font-family: sans-serif;
-    color: #c0c0c0;
-    margin: 10px 30px;
 }
+
+.caption {
+    margin: 10px 0;
+    font-size: 30px;
+    color: #5376A6;
+    cursor: pointer;
+}
+
+.captionclick {
+    color: darksalmon;
+}
+
+.dragged {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.dragged__cell-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.dragged__title {
+    width: calc(25% - 40px);
+    list-style-type: none;
+    font-weight: 900;
+    font-size: 18px;
+    margin: 0 20px;
+    color: #425E9E;
+}
+
+.dragged__cell {
+    width: calc(25% - 40px);
+    list-style-type: none;
+    margin: 0 20px;
+    min-height: 100px;
+    background-color: #fff;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.cell-card {
+    margin: 5px;
+    height: 90%;
+    box-sizing: border-box;
+    border: 2px solid #425E9E;
+    cursor: all-scroll;
+}
+
+.card-title {
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #425E9E;
+    color: #fff
+}
+
+.cats_container {
+    width: 100%;
+    display: none;
+}
+
+.cat-animation {
+    display: block;
+    animation-name: slidein;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes slidein {
+    from {
+        margin-right: 150%;
+    } to {
+        margin-right: 0%;
+    }
+}
+
+
+.card-desc {
+    padding: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+.hovered {
+    background-color: rgba(255,187,236, 0.1);
+}
+
+
+
+
