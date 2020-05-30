@@ -3,37 +3,29 @@ const dragAndDrop = () => {
     const cells = document.querySelectorAll('.js-cell');
 
     const dragStartHandler = function () {
-        setTimeout(() => {
-            this.classList.add('hide');
-        }, 0);
+      this.classList.add('hide')
     };
 
     const dragEndHandler = function () {
         this.classList.remove('hide');
     };
-
     const dragOverHandler = function (event) {
         event.preventDefault();
     };
-
     const dragEnterHandler = function () {
         this.classList.add('hovered');
     };
-
     const dragLeaveHandler = function () {
         this.classList.remove('hovered');
     };
-
     const dropHandler = function () {
         this.append(card);
     };
-
     cells.forEach((cell) => {
        cell.addEventListener('dragover', dragOverHandler);
         cell.addEventListener('dragenter', dragEnterHandler);
         cell.addEventListener('dragleave', dragLeaveHandler);
         cell.addEventListener('drop', dropHandler);
-
     });
 
     card.addEventListener('dragstart', dragStartHandler);

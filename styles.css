@@ -63,6 +63,7 @@
     box-sizing: border-box;
     border: 2px solid #425E9E;
     cursor: all-scroll;
+    transition: opacity .1s;
 }
 
 .card-title {
@@ -99,7 +100,7 @@
 }
 
 .hide {
-    display: none;
+    opacity: 0;
 }
 
 .hovered {
